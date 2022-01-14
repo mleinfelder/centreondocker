@@ -1,4 +1,4 @@
-# centreon-docker 3.4. #
+# CentreonDocker 3.4a #
 ---
 
 ## INSTALL ##
@@ -8,13 +8,13 @@ Build or pull from docker hub
 Build:
 
 ```
-docker build -t manuvaldi/centreon-docker .
+docker build -t mleinfelder/centreondk .
 ```
 
 or Pull:
 
 ```
-docker pull manuvaldi/centreon-docker
+docker pull mleinfelder/centreondk
 ```
 
 ## RUN ##
@@ -30,8 +30,15 @@ docker run --name centreon --restart always -p80:80  \
 	manuvaldi/centreon-docker
 ```
 
+Para rodar via docker-composer: 
+
+execute docker-compose up -d 
+
+Dentro da arvore onde se encontra o arquivos docker-compose.yml.
+
 login: admin
 password: centreon
 
+Imagem referencia a manuvaldi/centreon-docker
 Change it and lets go 
 # Centreon Docker
