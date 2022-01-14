@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+    lisa:
+      image: idesi/centreon-docker
+      restart: always
+      ports:
+        - 8001:80
+      container_name: centreon-docker
+      cap_add:
+        - NET_ADMIN
+      volumes:
+        - /etc/localtime:/etc/localtime:ro
+        - /opt/docker/centreon/backup:/var/backup
+        - /opt/docker/centreon/mysql:/var/lib/mysql
+        - /opt/docker/centreon/centreon:/etc/centreon
+        - /opt/docker/centreon/centreon-engine:/etc/centreon-engine
+        - /opt/docker/centreon/centreon-broken:/etc/centreon-broker
